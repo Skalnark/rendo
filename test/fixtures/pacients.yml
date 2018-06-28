@@ -1,0 +1,51 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  sex: MyString
+  birth: 2018-06-27
+  occupation: MyString
+  phone: 1
+  protesis: MyString
+  oralSex: MyString
+  observation: MyText
+  street: MyString
+  neighborhood: MyString
+  city: MyString
+  state: MyString
+  totalExposition: MyString
+  dayPeriod: MyString
+  startedTabagism: MyString
+  frequenceSmoking: MyString
+  stopedSmoking: MyString
+  whatSmoked: MyString
+  startedDrinking: MyString
+  frequenceDrinking: MyString
+  stopedDrinking: MyString
+  whatDrinked: MyString
+  whoHadCancer: MyString
+
+two:
+  name: MyString
+  sex: MyString
+  birth: 2018-06-27
+  occupation: MyString
+  phone: 1
+  protesis: MyString
+  oralSex: MyString
+  observation: MyText
+  street: MyString
+  neighborhood: MyString
+  city: MyString
+  state: MyString
+  totalExposition: MyString
+  dayPeriod: MyString
+  startedTabagism: MyString
+  frequenceSmoking: MyString
+  stopedSmoking: MyString
+  whatSmoked: MyString
+  startedDrinking: MyString
+  frequenceDrinking: MyString
+  stopedDrinking: MyString
+  whatDrinked: MyString
+  whoHadCancer: MyString

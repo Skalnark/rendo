@@ -1,0 +1,127 @@
+<div class="forms-style-5">
+  <p id="notice"><%= notice %></p>
+
+  <p>
+    <strong>Nome:</strong>
+    <%= @pacient.name %>
+  </p>
+
+  <p>
+    <strong>Sexo:</strong>
+    <%= @pacient.sex %>
+  </p>
+
+  <p>
+    <strong>Data de Nascimento:</strong>
+    <%= @pacient.birth %>
+  </p>
+
+  <p>
+    <strong>Ocupação:</strong>
+    <%= @pacient.occupation %>
+  </p>
+
+  <p>
+    <strong>Telefone:</strong>
+    <%= @pacient.phone %>
+  </p>
+
+  <p>
+    <strong>Rua:</strong>
+    <%= @pacient.street %>
+  </p>
+
+  <p>
+    <strong>Bairro:</strong>
+    <%= @pacient.neighborhood %>
+  </p>
+
+  <p>
+    <strong>Cidade:</strong>
+    <%= @pacient.city %>
+  </p>
+
+  <p>
+    <strong>Estado:</strong>
+    <%= @pacient.state %>
+  </p>
+
+  <p>
+    <strong>O quanto foi exposto ao Sol:</strong>
+    <%= @pacient.totalExposition %>
+  </p>
+
+  <p>
+    <strong>Horário da exposição:</strong>
+    <%= @pacient.dayPeriod %>
+  </p>
+
+  <p>
+    <strong>Quando começou a fumar:</strong>
+    <%= @pacient.startedTabagism %>
+  </p>
+
+  <p>
+    <strong>Frequencia com que fumava:</strong>
+    <%= @pacient.frequenceSmoking %>
+  </p>
+
+  <p>
+    <strong>Quando parou de fumar:</strong>
+    <%= @pacient.stopedSmoking %>
+  </p>
+
+  <p>
+    <strong>O que fumava:</strong>
+    <%= @pacient.whatSmoked %>
+  </p>
+
+  <p>
+    <strong>Quando começou a beber:</strong>
+    <%= @pacient.startedDrinking %>
+  </p>
+
+  <p>
+    <strong>Frequencia com que bebia:</strong>
+    <%= @pacient.frequenceDrinking %>
+  </p>
+
+  <p>
+    <strong>Quando parou de beber:</strong>
+    <%= @pacient.stopedDrinking %>
+  </p>
+
+  <p>
+    <strong>O que bebia:</strong>
+    <%= @pacient.whatDrinked %>
+  </p>
+
+  <p>
+    <strong>Quem, na família, teve câncer de boca ou garganta:</strong>
+    <%= @pacient.whoHadCancer %>
+  </p>
+
+  <p>
+    <strong>Possui protese:</strong>
+    <%= @pacient.protesis %>
+  </p>
+
+  <p>
+    <strong>Praticou sexo oral desprotegido:</strong>
+    <%= @pacient.oralSex %>
+  </p>
+
+
+  <p>
+    <strong>Observation:</strong>
+    <%= @pacient.observation %>
+  </p>
+
+  <div class="actions">
+    <%= link_to 'Cadastrar Paciente', new_pacient_path, class: "buttons" %>
+    <%= link_to 'Home', root_path, class: "buttons" %>'
+    <%= link_to 'Editar Paciente', edit_pacient_path(@pacient), class: "buttons" %>
+    <%= link_to 'Voltar', pacient_path, class: "buttons" %>'
+  </div>
+
+</div>

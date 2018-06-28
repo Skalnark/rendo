@@ -1,0 +1,76 @@
+<div class="forms-style-5">
+<p id="notice"><%= notice %></p>
+<form>
+<legend>Pacientes</legend>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Sexo</th>
+      <th>Data de Nascimento</th>
+      <th>Occupação</th>
+      <th>Telefone</th>
+      <th>Rua</th>
+      <th>Bairro</th>
+      <th>Cidade</th>
+      <th>Estado</th>
+      <th>O quanto foi exposto ao Sol</th>
+      <th>Horário da exposição</th>
+      <th>Quando começou a fumar</th>
+      <th>Frequência com que fumava</th>
+      <th>Quando parou de fumar</th>
+      <th>O que fumava</th>
+      <th>Quando começou a beber</th>
+      <th>Com que frequência bebia</th>
+      <th>Quando parou de beber</th>
+      <th>O que bebia</th>
+      <th>Quem, na família, teve câncer de boca ou garganta</th>
+      <th>Possui Protese</th>
+      <th>Fez Sexo Oral desprotegido</th>
+      <th>Observation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pacients.each do |pacient| %>
+      <tr>
+        <td><%= pacient.name %></td>
+        <td><%= pacient.sex %></td>
+        <td><%= pacient.birth %></td>
+        <td><%= pacient.occupation %></td>
+        <td><%= pacient.phone %></td>
+        <td><%= pacient.street %></td>
+        <td><%= pacient.neighborhood %></td>
+        <td><%= pacient.city %></td>
+        <td><%= pacient.state %></td>
+        <td><%= pacient.totalExposition %></td>
+        <td><%= pacient.dayPeriod %></td>
+        <td><%= pacient.startedTabagism %></td>
+        <td><%= pacient.frequenceSmoking %></td>
+        <td><%= pacient.stopedSmoking %></td>
+        <td><%= pacient.whatSmoked %></td>
+        <td><%= pacient.startedDrinking %></td>
+        <td><%= pacient.frequenceDrinking %></td>
+        <td><%= pacient.stopedDrinking %></td>
+        <td><%= pacient.whatDrinked %></td>
+        <td><%= pacient.whoHadCancer %></td>
+        <td><%= pacient.protesis %></td>
+        <td><%= pacient.oralSex %></td>
+        <td><%= pacient.observation %></td>
+        <td><%= link_to 'Editar', edit_pacient_path(pacient) %></td>
+        <td><%= link_to 'Apagar', pacient, method: :delete%></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<div class="actions">
+  <%= link_to 'Cadastrar Paciente', new_pacient_path, class: "buttons" %>
+  <%= link_to 'Home', root_path, class: "buttons" %>'
+</div>
+
+</form>
+</div>
