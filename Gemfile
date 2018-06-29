@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.3'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
@@ -60,8 +59,7 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'capistrano', '>= 3.2.1'
-  gem 'capistrano-rbenv', '~> 2.0'           # idiomatic rbenv support
-  gem 'capistrano-rbenv-install'             # ensures the right ruby version is installed
+  gem 'capistrano-rvm'
   gem 'capistrano-bundler', '~> 1.1.2'       # support for bundler
   gem 'capistrano-rails', '~> 1.0'           # automatic migrations and asset compilation
   gem 'capistrano-unicorn-nginx', '~> 2.0'   # plug-n-play nginx and unicorn

@@ -12,7 +12,7 @@ set :branch, 'master'
 set :keep_releases, 5
 set :format, :airbrussh
 set :log_level, :debug
-append :linked_files, "config/database.yml"
+append :linked_files, "config/database.yml", "config/secrets.yml"
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
