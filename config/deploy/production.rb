@@ -3,7 +3,7 @@
 # Defines a single server with a list of roles and multiple properties.
 # You can define all roles on a single server, or split them:
 
-server "ec2-18-237-255-200.us-west-2.compute.amazonaws.com", user: "ubuntu", roles: %w{app db web}, my_property: :my_value
+server "34.218.36.39", user: "ubuntu", roles: %w{app db web}, my_property: :my_value
 # server "ec2-54-200-123-18.us-west-2.compute.amazonaws.com", user: "ubuntu", roles: %w{app web}, other_property: :other_value
 # server "ec2-54-200-123-18.us-west-2.compute.amazonaws.com", user: "ubuntu", roles: %w{db}
 
@@ -58,3 +58,15 @@ server "ec2-18-237-255-200.us-west-2.compute.amazonaws.com", user: "ubuntu", rol
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+
+root = "/var/www/rod/current" 
+working_directory root 
+ 
+pid "#{root}/tmp/pids/unicorn.pid" 
+ 
+stderr_path "#{root}/log/unicorn.log" 
+stdout_path "#{root}/log/unicorn.log" 
+ 
+worker_processes 4 timeout 30 preload_app true 
+ 
+listen '/tmp/rod.sock', backlog: 64 

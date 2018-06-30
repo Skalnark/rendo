@@ -60,6 +60,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'capistrano', '>= 3.2.1'
   gem 'capistrano-rvm'
+  gem "capistrano3-unicorn" 
   gem 'capistrano-bundler', '~> 1.1.2'       # support for bundler
   gem 'capistrano-rails', '~> 1.0'           # automatic migrations and asset compilation
   gem 'capistrano-unicorn-nginx', '~> 2.0'   # plug-n-play nginx and unicorn
@@ -77,6 +78,7 @@ group :test do
 end
 
 group :production do
+  gem 'unicorn'
   gem 'pg'
 end
 
