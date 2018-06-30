@@ -58,10 +58,8 @@ server "34.218.36.39", user: "ubuntu", roles: %w{app db web}, my_property: :my_v
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
-
-root = "/var/www/rod/current" 
-working_directory root 
  
+working_directory "/var/www/rod/current"
 pid "#{root}/tmp/pids/unicorn.pid" 
  
 stderr_path "#{root}/log/unicorn.log" 
