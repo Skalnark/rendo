@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2018_06_27_164655) do
     t.string "oralSex"
     t.text "observation"
     t.string "street"
+    t.string "number"
     t.string "neighborhood"
     t.string "city"
     t.string "state"
