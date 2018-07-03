@@ -65,8 +65,6 @@ group :development do
   gem 'capistrano-rails', '~> 1.0'           # automatic migrations and asset compilation
   gem 'capistrano-unicorn-nginx', '~> 2.0'   # plug-n-play nginx and unicorn
   gem 'capistrano-postgresql', '~> 3.0'      # plug-n-play postgresql
-  gem 'capistrano-safe-deploy-to', '~> 1.1'  # ensures deploy path for the app exists
-  gem 'capistrano-ssh-doctor'                # helps with debugging ssh-agent forwarding
 end
 
 group :test do
