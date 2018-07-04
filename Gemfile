@@ -22,6 +22,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'mini_racer', platforms: :ruby
 # Ruby on Rails unobtrusive scripting adapter for jQuery 
 gem 'jquery-rails'
+# Passenger for rails
+gem "passenger", ">= 5.0.25", require: "phusion_passenger/rack_handler"
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
@@ -39,6 +41,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem 'capistrano-passenger'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

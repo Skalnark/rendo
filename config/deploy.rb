@@ -55,3 +55,5 @@ after 'deploy:publishing', 'deploy:restart'
      	invoke 'unicorn:stop'
      end
    end
+
+after :some_other_task, :'passenger:restart'
