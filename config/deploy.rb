@@ -55,5 +55,3 @@ after 'deploy:publishing', 'deploy:restart'
      	invoke 'unicorn:start'
      end
    end
-
-after :'deploy:restart', :'passenger:restart'
