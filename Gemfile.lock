@@ -147,9 +147,6 @@ GEM
     nokogiri (1.8.3)
       mini_portile2 (~> 2.3.0)
     orm_adapter (0.5.0)
-    passenger (5.3.3)
-      rack
-      rake (>= 0.8.1)
     pg (1.0.0)
     public_suffix (3.0.2)
     puma (3.11.4)
@@ -277,7 +274,6 @@ DEPENDENCIES
   jbuilder (~> 2.5)
   jquery-rails
   listen (>= 3.0.5, < 3.2)
-  passenger (>= 5.0.25)
   pg
   puma (~> 3.11)
   rails (~> 5.2.0)
