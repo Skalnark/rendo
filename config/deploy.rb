@@ -51,9 +51,9 @@ append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/syst
 after 'deploy:publishing', 'deploy:restart'  
    namespace :deploy do  
      task :restart do
-     	invoke 'unicorn:start'
      	invoke 'unicorn:stop'
+     	invoke 'unicorn:start'
      end
    end
 
-after :some_other_task, :'passenger:restart'
+after :'deploy:restart', :'passenger:restart'
