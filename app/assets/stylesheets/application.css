@@ -61,7 +61,6 @@
 }
 .form-style-5 select{
     -webkit-appearance: menulist-button;
-    -moz-box-sizing: border-box;
     height:35px;
 }
 .form-style-5 .number {
@@ -109,7 +108,6 @@
     background: #109177;
 }
 .form-style-5 select, th, td{
-    background: rgba(255,255,255,.1);
     border: 1px solid grey;
     border-radius: 4px;
     font-size: 16px;
