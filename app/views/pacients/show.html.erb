@@ -1,4 +1,4 @@
-<div class="forms-style-5">
+<div class="form-style-5">
   <p id="notice"><%= notice %></p>
 
   <p>
@@ -123,10 +123,9 @@
   </p>
 
   <div class="actions">
-    <%= link_to 'Cadastrar Paciente', new_pacient_path, class: "buttons" %>
-    <%= link_to 'Home', root_path, class: "buttons" %>'
-    <%= link_to 'Editar Paciente', edit_pacient_path(@pacient), class: "buttons" %>
-    <%= link_to 'Voltar', pacient_path, class: "buttons" %>'
+    <%= link_to 'Cadastrar Paciente', new_pacient_path%>
+    <%= link_to 'Home', root_path%>
+    <%= link_to 'Editar Paciente', edit_pacient_path(@pacient)%>
+    <%= link_to 'Voltar', pacients_path%>
   </div>
-
 </div>

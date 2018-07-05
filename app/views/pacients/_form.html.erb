@@ -13,114 +13,121 @@
   <form>
     <fieldset>
       <legend><span class="number">1</span> Informações sobre o paciente</legend>
-        <div class="field">
-          Nome: <%= form.text_field :name %>
-        </div>
+      <div class="field">
+        Nome: <%= form.text_field :name %>
+      </div>
 
-        <div class="field">
-          Sexo: <%= form.select(:sex, @sex_options) %>
-        </div>
+      <div class="field">
+        Sexo: <%= form.select(:sex, @sex_options) %>
+      </div>
 
-        <div class="field">
-          Data de Nascimento: <%= form.date_select(:birth, :start_year => 1900, :end_year => Date.current.year)%>
-        </div>
+      <div class="field">
+        Data de Nascimento: <%= form.date_select(:birth, :start_year => 1900, :end_year => Date.current.year)%>
+      </div>
 
-        <div class="field">
-          Ocupação: <%= form.text_field :occupation %>
-        </div>
+      <div class="field">
+        Ocupação: <%= form.text_field :occupation %>
+      </div>
 
-        <div class="field">
-          Telefone: <%= form.phone_field :phone %>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend><span class="number">2</span> Endereço</legend>
-        <div class="field">
-          Rua: <%= form.text_field :street %>
-        </div>
-        <div class="field">
-          Número: <%= form.number_field :number %>
-        </div>
-        <div class="field">
-          Bairro: <%= form.text_field :neighborhood %>
-        </div>
+      <div class="field">
+        Telefone: <%= form.phone_field :phone %>
+      </div>
+    </fieldset>
 
-        <div class="field">
-          Cidade: <%= form.text_field :city %>
-        </div>
+    <fieldset>
+      <legend><span class="number">2</span> Endereço</legend>
+      <div class="field">
+        Rua: <%= form.text_field :street %>
+      </div>
 
-        <div class="field">
-          Estado: <%= form.text_field :state %>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend><span class="number">3</span> Alcoolismo</legend>
-        <div class="field">
-        Quando começou a beber: <%= form.number_field :startedDrinking, :value => 0 %>
-        </div>
+      <div class="field">
+        Número: <%= form.number_field :number %>
+      </div>
 
-        <div class="field">
-          Frequência com que bebe: <%= form.select :frequenceDrinking, @frequenceDrinking_options, :value => 'Nunca bebeu' %>
-        </div>
+      <div class="field">
+        Bairro: <%= form.text_field :neighborhood %>
+      </div>
 
-        <div class="field">
-          Quando Parou de beber (0 = nunca bebeu): <%= form.number_field :stopedDrinking, :value => 0 %>
-        </div>
+      <div class="field">
+        Cidade: <%= form.text_field :city %>
+      </div>
 
-        <div class="field">
-          O que bebia: <%= form.select :whatDrinked, @whatDrinked_options, :value => 'Nunca bebeu'%>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend><span class="number">4</span> Exposição solar</legend>
-        <div class="field">
-          Exposição solar sofrida: <%= form.select :totalExposition, @totalExposition_options, :value => 'Nenhuma' %>
-        </div>
+      <div class="field">
+        Estado: <%= form.text_field :state %>
+      </div>
+    </fieldset>
 
-        <div class="field">
-          Horário de exposição: <%= form.select :dayPeriod, @dayPeriod_options, :value => 'Sem exposição' %>
-        </div>
-      </fieldset>
-      <fieldset>
-        <legend><span class="number">5</span> Tabagismo</legend>
-          <div class="field">
-           Quando começou a fumar: <%= form.number_field :startedTabagism, :value => 0%>
-          </div>
+    <fieldset>
+      <legend><span class="number">3</span> Alcoolismo</legend>
+      <div class="field">
+      Quando começou a beber: <%= form.number_field :startedDrinking, :value => 0 %>
+      </div>
 
-          <div class="field">
-            <%= form.select :frequenceSmoking, @frequenceSmoking_options, :value => 'Nunca fumou' %>
-          </div>
+      <div class="field">
+        Frequência com que bebe: <%= form.select :frequenceDrinking, @frequenceDrinking_options, :value => 'Nunca bebeu' %>
+      </div>
 
-          <div class="field">
-            Quando Parou de Fumar (0 = nunca fumou): <%= form.number_field :stopedSmoking, :value => 0 %>
-          </div>
+      <div class="field">
+        Quando Parou de beber (0 = nunca bebeu): <%= form.number_field :stopedDrinking, :value => 0 %>
+      </div>
 
-          <div class="field">
-            O que fumava: <%= form.select :whatSmoked, @whatSmoked_options, :value => 'Nunca fumou' %>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend><span class="number">6</span> Outros</legend>
-          <div class="field">
-            Quem na família teve câncer de garganta ou boca: <%= form.select :whoHadCancer, @whoHadCancer_options %>
-          </div>
-        
-          <div class="field">
-          Possui prótese: <%= form.select :protesis, ['Sim', 'Não'] %>
-          </div>
+      <div class="field">
+        O que bebia: <%= form.select :whatDrinked, @whatDrinked_options, :value => 'Nunca bebeu'%>
+      </div>
+    </fieldset>
 
-          <div class="field">
-            Realizou sexo oral desprotegido: <%= form.select :oralSex, @oralSex_options %>
-          </div>
+    <fieldset>
+      <legend><span class="number">4</span> Exposição solar</legend>
+      <div class="field">
+        Exposição solar sofrida: <%= form.select :totalExposition, @totalExposition_options, :value => 'Nenhuma' %>
+      </div>
 
-          <div class="field">
-            Observação: <%= form.text_area :observation %>
-          </div>
-        </fieldset>
+      <div class="field">
+        Horário de exposição: <%= form.select :dayPeriod, @dayPeriod_options, :value => 'Sem exposição' %>
+      </div>
+    </fieldset>
 
+    <fieldset>
+      <legend><span class="number">5</span> Tabagismo</legend>
+      <div class="field">
+       Quando começou a fumar: <%= form.number_field :startedTabagism, :value => 0%>
+      </div>
 
-  <div class="actions">
-    <%= form.submit "Cadastrar paciente" %>
-    <%= link_to "Voltar", pacients_path, class: "buttons" %>
-  </div>
+      <div class="field">
+        <%= form.select :frequenceSmoking, @frequenceSmoking_options, :value => 'Nunca fumou' %>
+      </div>
+
+      <div class="field">
+        Quando Parou de Fumar (0 = nunca fumou): <%= form.number_field :stopedSmoking, :value => 0 %>
+      </div>
+
+      <div class="field">
+        O que fumava: <%= form.select :whatSmoked, @whatSmoked_options, :value => 'Nunca fumou' %>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend><span class="number">6</span> Outros</legend>
+      <div class="field">
+        Quem na família teve câncer de garganta ou boca: <%= form.select :whoHadCancer, @whoHadCancer_options %>
+      </div>
+    
+      <div class="field">
+      Possui prótese: <%= form.select :protesis, ['Sim', 'Não'] %>
+      </div>
+
+      <div class="field">
+        Realizou sexo oral desprotegido: <%= form.select :oralSex, @oralSex_options %>
+      </div>
+
+      <div class="field">
+        Observação: <%= form.text_area :observation %>
+      </div>
+    </fieldset>
+
+    <div class="button-style">
+      <%= form.submit "Cadastrar paciente" %>
+      <%= link_to "Voltar", pacients_path%>
+    </div>
+  </form>
 <% end %>
