@@ -49,22 +49,23 @@
       </div>
 
       <div class="field">
-        Cidade: <%= form.text_field :city %>
+        Estado: <%= form.select(:state, @state_options) %>
       </div>
 
       <div class="field">
-        Estado: <%= form.text_field :state %>
+        Cidade: <%= form.text_field :city %>
       </div>
     </fieldset>
 
     <fieldset>
       <legend><span class="number">3</span> Alcoolismo</legend>
-      <div class="field">
-      Quando começou a beber: <%= form.number_field :startedDrinking, :value => 0 %>
-      </div>
 
       <div class="field">
         Frequência com que bebe: <%= form.select :frequenceDrinking, @frequenceDrinking_options, :value => 'Nunca bebeu' %>
+      </div>
+
+      <div class="field">
+        Quando começou a beber: <%= form.number_field :startedDrinking, :value => 0 %>
       </div>
 
       <div class="field">
@@ -89,12 +90,13 @@
 
     <fieldset>
       <legend><span class="number">5</span> Tabagismo</legend>
+
       <div class="field">
-       Quando começou a fumar: <%= form.number_field :startedTabagism, :value => 0%>
+        Frequência com que fuma: <%= form.select :frequenceSmoking, @frequenceSmoking_options, :value => 'Nunca fumou' %>
       </div>
 
       <div class="field">
-        <%= form.select :frequenceSmoking, @frequenceSmoking_options, :value => 'Nunca fumou' %>
+       Quando começou a fumar: <%= form.number_field :startedTabagism, :value => 0%>
       </div>
 
       <div class="field">
@@ -113,7 +115,7 @@
       </div>
     
       <div class="field">
-      Possui prótese: <%= form.select :protesis, ['Sim', 'Não'] %>
+        Possui prótese: <%= form.select :protesis, ['Sim', 'Não'] %>
       </div>
 
       <div class="field">

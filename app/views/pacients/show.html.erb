@@ -52,12 +52,12 @@
   </p>
 
   <p>
-    <strong>O quanto foi exposto ao Sol:</strong>
+    <strong>Exposição solar sofrida:</strong>
     <%= @pacient.totalExposition %>
   </p>
 
   <p>
-    <strong>Horário da exposição:</strong>
+    <strong>Horário de exposição:</strong>
     <%= @pacient.dayPeriod %>
   </p>
 
@@ -67,12 +67,12 @@
   </p>
 
   <p>
-    <strong>Frequencia com que fumava:</strong>
+    <strong>Frequência com que fuma:</strong>
     <%= @pacient.frequenceSmoking %>
   </p>
 
   <p>
-    <strong>Quando parou de fumar:</strong>
+    <strong>Quando Parou de Fumar:</strong>
     <%= @pacient.stopedSmoking %>
   </p>
 
@@ -87,12 +87,12 @@
   </p>
 
   <p>
-    <strong>Frequencia com que bebia:</strong>
+    <strong>Frequência com que bebe:</strong>
     <%= @pacient.frequenceDrinking %>
   </p>
 
   <p>
-    <strong>Quando parou de beber:</strong>
+    <strong>Quando Parou de beber:</strong>
     <%= @pacient.stopedDrinking %>
   </p>
 
@@ -102,30 +102,30 @@
   </p>
 
   <p>
-    <strong>Quem, na família, teve câncer de boca ou garganta:</strong>
+    <strong>Quem na família teve câncer de garganta ou boca:</strong>
     <%= @pacient.whoHadCancer %>
   </p>
 
   <p>
-    <strong>Possui protese:</strong>
+    <strong>Possui prótese:</strong>
     <%= @pacient.protesis %>
   </p>
 
   <p>
-    <strong>Praticou sexo oral desprotegido:</strong>
+    <strong>Realizou sexo oral desprotegido:</strong>
     <%= @pacient.oralSex %>
   </p>
 
 
   <p>
-    <strong>Observation:</strong>
+    <strong>Observação:</strong>
     <%= @pacient.observation %>
   </p>
+</div>
 
-  <div class="actions">
-    <%= link_to 'Cadastrar Paciente', new_pacient_path%>
-    <%= link_to 'Home', root_path%>
-    <%= link_to 'Editar Paciente', edit_pacient_path(@pacient)%>
-    <%= link_to 'Voltar', pacients_path%>
-  </div>
+<div class="button-style">
+  <%= link_to 'Cadastrar Paciente', new_pacient_path%>
+  <%= link_to 'Home', root_path%>
+  <%= link_to 'Editar Paciente', edit_pacient_path(@pacient)%>
+  <%= link_to 'Voltar', pacients_path%>
 </div>

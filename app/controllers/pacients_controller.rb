@@ -77,6 +77,7 @@ class PacientsController < ApplicationController
 
     def options
       @sex_options = ['Masculino', 'Feminino', 'Outro']
+      @state_options = ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO']
       @frequenceDrinking_options = ['Nunca bebeu', 'Diariamente', 'Semanalmente', 'Mensalmente', 'Esporadicamente']
       @whatDrinked_options = ['Nunca bebeu', 'Destilados (cachaça, uísque)', 'Fermentados (cerveja, vinho)']
       @totalExposition_options = ['Nenhuma', 'Diaria', 'Mais de 3 vezes por semana', 'Menos de três vezes por semana']

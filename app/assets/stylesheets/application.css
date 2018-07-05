@@ -39,7 +39,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box; 
     background-color: #e8eeef;
-    color: hsl(0, 0%, 35%);;
+    color: hsl(0, 0%, 35%);
     -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
@@ -93,10 +93,11 @@
     font-size: 18px;
     text-align: center;
     font-style: normal;
-    width: 50vw;
+    width: 22vw;
     border: 1px solid #16a085;
     border-width: 1px 1px 3px;
-    margin-bottom: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     border-radius: 8px;
 }
 .form-style-5 input[type="submit"]:hover,
@@ -108,18 +109,18 @@
     background: #109177;
 }
 .form-style-5 select, th, td{
+    text-align: center;
     border: 1px solid grey;
     border-radius: 4px;
     font-size: 16px;
     margin: 0;
     outline: 0;
-    padding: 15px;
+    padding: 0px 15px 0px 15px;
     box-sizing: border-box; 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box; 
     background-color: #e8eeef;
-    color:#8a97a0;
-    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    color:hsl(0, 0%, 35%);
     box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
     margin-bottom: 30px;
 }
@@ -137,7 +138,7 @@ a:visited {
 }
 
 .button-style{
-    width: 50vw;
+    width: 22vw;
     margin: auto;
     padding: 20px;
     background: #f4f7f8;
