@@ -1,3 +1,6 @@
+body{
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
 .form-style-5{
     width: 90vw;
     margin: 10px auto;
@@ -27,6 +30,7 @@
 .form-style-5 input[type="tel"],
 .form-style-5 input[type="phone"],
 .form-style-5 input[type="url"],
+.form-style-5 input[type="password"],
 .form-style-5 textarea{
     border: none;
     border-radius: 4px;
@@ -54,6 +58,7 @@
 .form-style-5 input[type="time"]:focus,
 .form-style-5 input[type="url"]:focus,
 .form-style-5 input[type="tel"]:focus,
+.form-style-5 input[type="password"]:focus,
 .form-style-5 input[type="phone"]:focus,
 .form-style-5 textarea:focus,
 .form-style-5 select:focus{
@@ -84,7 +89,7 @@
 .button-style input[type="submit"]
 {
     cursor: pointer;
-    position: relative;
+    position: left;
     display: inline-block;
     padding: 18px 0px 18px 0px;
     color: #FFF;
