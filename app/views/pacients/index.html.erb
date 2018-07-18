@@ -6,27 +6,28 @@
       <tr>
         <th>Nome</th>
         <th>Sexo</th>
-        <th>Data de Nascimento</th>
-        <th>Occupação</th>
+        <th>Nascimento</th>
+        <th>Ocupação</th>
         <th>Telefone</th>
         <th>Rua</th>
         <th>Bairro</th>
         <th>Cidade</th>
         <th>Estado</th>
-        <th>Exposição ao Sol</th>
+        <th>Exp. solar</th>
         <th>Horário</th>
         <th>Tabagismo</th>
-        <th>Frequência</th>
-        <th>Parou o Tabagismo</th>
+        <th>Freq. tabagismo</th>
+        <th>Parou o de fumar</th>
         <th>O que fumava</th>
         <th>Começou a beber</th>
         <th>Frequência</th>
         <th>Parou de beber</th>
-        <th>Bebiddas</th>
+        <th>Bebidas</th>
         <th>Câncer</th>
         <th>Protese</th>
         <th>Sexo Oral desprotegido</th>
         <th>Observação</th>
+        <th>Vídeo</th>
         <th colspan="2"></th>
       </tr>
     </thead>
@@ -57,6 +58,7 @@
           <td><%= pacient.protesis %></td>
           <td><%= pacient.oralSex %></td>
           <td><%= pacient.observation %></td>
+          <td><%= link_to "Download do vídeo", rails_blob_path(pacient.video), target: :_blank%>
           <td>
             <%= link_to 'Editar', edit_pacient_path(pacient) %>
             <%= link_to 'Apagar', pacient, method: :delete%>

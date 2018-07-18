@@ -31,7 +31,7 @@ class PacientsController < ApplicationController
 
     respond_to do |format|
       if @pacient.save
-        format.html { redirect_to @pacient, notice: 'Pacient was successfully created.' }
+        format.html { redirect_to @pacient, notice: 'Paciente cadastrado com sucesso.' }
         format.json { render :show, status: :created, location: @pacient }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class PacientsController < ApplicationController
   def update
     respond_to do |format|
       if @pacient.update(pacient_params)
-        format.html { redirect_to @pacient, notice: 'Pacient was successfully updated.' }
+        format.html { redirect_to @pacient, notice: 'Paciente atualizado com sucesso.' }
         format.json { render :show, status: :ok, location: @pacient }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class PacientsController < ApplicationController
   def destroy
     @pacient.destroy
     respond_to do |format|
-      format.html { redirect_to pacients_url, notice: 'Pacient was successfully destroyed.' }
+      format.html { redirect_to pacients_url, notice: 'Paciente excluído.' }
       format.json { head :no_content }
     end
   end
@@ -72,7 +72,10 @@ class PacientsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pacient_params
-      params.require(:pacient).permit(:name, :sex, :birth, :occupation, :phone, :protesis, :oralSex, :observation, :street, :number, :neighborhood, :city, :state, :totalExposition, :dayPeriod, :startedTabagism, :frequenceSmoking, :stopedSmoking, :whatSmoked, :startedDrinking, :frequenceDrinking, :stopedDrinking, :whatDrinked, :whoHadCancer)
+      params.require(:pacient).permit(:name, :sex, :birth, :occupation, :phone, :protesis, 
+        :oralSex, :observation, :street, :number, :neighborhood, :city, :state, :totalExposition,
+         :dayPeriod, :startedTabagism, :frequenceSmoking, :stopedSmoking, :whatSmoked, 
+         :startedDrinking, :frequenceDrinking, :stopedDrinking, :whatDrinked, :whoHadCancer, :video)
     end
 
     def options

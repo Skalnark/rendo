@@ -30,7 +30,7 @@
       </div>
 
       <div class="field">
-        Telefone: <%= form.phone_field :phone %>
+        Telefone: <%= form.phone_field(:phone, placeholder: '00-90000-0000'); type="tel" %>
       </div>
     </fieldset>
 
@@ -125,10 +125,15 @@
       <div class="field">
         Observação: <br> <%= form.text_area :observation %>
       </div>
+
+      <div class="field">
+        Enviar o vídeo:
+          <%= form.file_field :video, required: true %>
+      </div>
     </fieldset>
 
     <div class="button-style">
-      <%= form.submit "Cadastrar paciente" %>
+      <%= form.submit "Cadastrar paciente", data: { disable_with: 'Uploading'} %>
       <%= link_to "Voltar", pacients_path%>
     </div>
   </form>
