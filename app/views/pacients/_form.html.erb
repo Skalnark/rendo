@@ -41,7 +41,7 @@
       </div>
 
       <div class="field">
-        Número: <%= form.number_field :number %>
+        Número: <%= form.number_field :number, :min => 0 %>
       </div>
 
       <div class="field">
@@ -65,11 +65,11 @@
       </div>
 
       <div class="field">
-        Quando começou a beber: <%= form.number_field :startedDrinking, :value => 0 %>
+        Com quantos anos começou a beber: <%= form.number_field :startedDrinking, :value => 0, :min => 0 %>
       </div>
 
       <div class="field">
-        Quando Parou de beber (0 = nunca bebeu): <%= form.number_field :stopedDrinking, :value => 0 %>
+        Com quantos anos parou de beber (0 = nunca bebeu): <%= form.number_field :stopedDrinking, :value => 0, :min => 0 %>
       </div>
 
       <div class="field">
@@ -96,11 +96,11 @@
       </div>
 
       <div class="field">
-       Quando começou a fumar: <%= form.number_field :startedTabagism, :value => 0%>
+        Com quanto anos começou a fumar: <%= form.number_field :startedTabagism, :value => 0, :min => 0%>
       </div>
 
       <div class="field">
-        Quando Parou de Fumar (0 = nunca fumou): <%= form.number_field :stopedSmoking, :value => 0 %>
+        Com quantos anos parou de fumar (0 = nunca fumou): <%= form.number_field :stopedSmoking, :value => 0, :min => 0%>
       </div>
 
       <div class="field">
