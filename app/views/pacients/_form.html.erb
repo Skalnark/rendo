@@ -30,7 +30,7 @@
       </div>
 
       <div class="field">
-        Telefone: <%= form.phone_field(:phone, placeholder: '00-90000-0000'); type="tel" %>
+        Telefone: <%= form.phone_field(:phone, placeholder: '00-90000-0000')%>
       </div>
     </fieldset>
 
@@ -64,17 +64,20 @@
         Frequência com que bebe: <%= form.select :frequenceDrinking, @frequenceDrinking_options, :value => 'Nunca bebeu' %>
       </div>
 
-      <div class="field">
-        Com quantos anos começou a beber: <%= form.number_field :startedDrinking, :value => 0, :min => 0 %>
-      </div>
+      <section id="already_drank">
+        <div class="field">
+          Com quantos anos começou a beber: <%= form.number_field :startedDrinking, :value => 0, :min => 0 %>
+        </div>
 
-      <div class="field">
-        Com quantos anos parou de beber (0 = nunca bebeu): <%= form.number_field :stopedDrinking, :value => 0, :min => 0 %>
-      </div>
+        <div class="field">
+          Com quantos anos parou de beber (0 = nunca bebeu): <%= form.number_field :stopedDrinking, :value => 0, :min => 0 %>
+        </div>
 
-      <div class="field">
-        O que bebia: <%= form.select :whatDrinked, @whatDrinked_options, :value => 'Nunca bebeu'%>
-      </div>
+        <div class="field">
+          O que bebia: <%= form.select :whatDrinked, @whatDrinked_options, :value => 'Nunca bebeu'%>
+        </div>
+      </section>
+      
     </fieldset>
 
     <fieldset>
@@ -95,17 +98,19 @@
         Frequência com que fuma: <%= form.select :frequenceSmoking, @frequenceSmoking_options, :value => 'Nunca fumou' %>
       </div>
 
-      <div class="field">
-        Com quanto anos começou a fumar: <%= form.number_field :startedTabagism, :value => 0, :min => 0%>
-      </div>
+      <section id="already_smoked">
+        <div class="field">
+          Com quanto anos começou a fumar: <%= form.number_field :startedTabagism, :value => 0, :min => 0%>
+        </div>
 
-      <div class="field">
-        Com quantos anos parou de fumar (0 = nunca fumou): <%= form.number_field :stopedSmoking, :value => 0, :min => 0%>
-      </div>
+        <div class="field">
+          Com quantos anos parou de fumar (0 = nunca fumou): <%= form.number_field :stopedSmoking, :value => 0, :min => 0%>
+        </div>
 
-      <div class="field">
-        O que fumava: <%= form.select :whatSmoked, @whatSmoked_options, :value => 'Nunca fumou' %>
-      </div>
+        <div class="field">
+          O que fumava: <%= form.select :whatSmoked, @whatSmoked_options, :value => 'Nunca fumou' %>
+        </div>
+      </section>
     </fieldset>
 
     <fieldset>

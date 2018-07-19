@@ -150,3 +150,8 @@ a:visited {
     border-radius: 8px;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
+
+#already_drank,
+#already_smoked{
+    display: none;
+}
