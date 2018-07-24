@@ -1,7 +1,7 @@
 <%= form_for(@pacient, html:{class:'form-style-5'}) do |form| %>
   <% if pacient.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(pacient.errors.count, "error") %> prohibited this pacient from being saved:</h2>
+      <h2><%= pluralize(pacient.errors.count, "error") %> Não foi possível salvar o paciente:</h2>
 
       <ul>
       <% pacient.errors.full_messages.each do |message| %>
@@ -66,15 +66,17 @@
 
       <section id="already_drank">
         <div class="field">
-          Com quantos anos começou a beber: <%= form.number_field :startedDrinking, :value => 0, :min => 0 %>
+          Quando começou a beber (anos): <%= form.number_field :startedDrinking, :value => 0, :min => 0 %>
         </div>
 
         <div class="field">
-          Com quantos anos parou de beber (0 = nunca bebeu): <%= form.number_field :stopedDrinking, :value => 0, :min => 0 %>
+          Quando parou de beber (anos): <%= form.number_field :stopedDrinking, :value => 0, :min => 0 %>
         </div>
 
         <div class="field">
-          O que bebia: <%= form.select :whatDrinked, @whatDrinked_options, :value => 'Nunca bebeu'%>
+          Fermentados (Vinho, Cerveja): <%= check_box_tag 'pacient[whatDrinked][]', 'Cerveja/Vinho', checked('Cerveja/Vinho'), id: 'fermentados' %>
+
+          Destilados (Cachaça, Whiski): <%= check_box_tag 'pacient[whatDrinked][]', 'Whiski/Cachaça', checked('Whiski/Cachaça'), id: 'destilados' %>
         </div>
       </section>
       
@@ -133,7 +135,11 @@
 
       <div class="field">
         Enviar o vídeo:
-          <%= form.file_field :video, required: true %>
+          <%if(@need_video)%>
+            <%= form.file_field :video, required: true%>
+          <%else%>
+            <%= form.file_field :video%>
+          <%end%>
       </div>
     </fieldset>
 

@@ -17,11 +17,13 @@ class PacientsController < ApplicationController
   def new
     @pacient = Pacient.new
     options
+    @need_video = true
   end
 
   # GET /pacients/1/edit
   def edit
     options
+    @need_video = false
   end
 
   # POST /pacients
@@ -73,9 +75,13 @@ class PacientsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def pacient_params
       params.require(:pacient).permit(:name, :sex, :birth, :occupation, :phone, :protesis, 
-        :oralSex, :observation, :street, :number, :neighborhood, :city, :state, :totalExposition,
+         :oralSex, :observation, :street, :number, :neighborhood, :city, :state, :totalExposition,
          :dayPeriod, :startedTabagism, :frequenceSmoking, :stopedSmoking, :whatSmoked, 
          :startedDrinking, :frequenceDrinking, :stopedDrinking, :whatDrinked, :whoHadCancer, :video)
+    end
+
+    def upload_video
+      @need_video = true
     end
 
     def options
