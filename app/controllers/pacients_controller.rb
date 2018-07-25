@@ -18,6 +18,7 @@ class PacientsController < ApplicationController
     @pacient = Pacient.new
     options
     @need_video = true
+    @checked = ""
   end
 
   # GET /pacients/1/edit
@@ -77,7 +78,7 @@ class PacientsController < ApplicationController
       params.require(:pacient).permit(:name, :sex, :birth, :occupation, :phone, :protesis, 
          :oralSex, :observation, :street, :number, :neighborhood, :city, :state, :totalExposition,
          :dayPeriod, :startedTabagism, :frequenceSmoking, :stopedSmoking, :whatSmoked, 
-         :startedDrinking, :frequenceDrinking, :stopedDrinking, :whatDrinked, :whoHadCancer, :video)
+         :startedDrinking, :frequenceDrinking, :stopedDrinking, :whatDrinked[], :whoHadCancer, :video)
     end
 
     def upload_video
@@ -88,7 +89,7 @@ class PacientsController < ApplicationController
       @sex_options = ['Masculino', 'Feminino', 'Outro']
       @state_options = ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO']
       @frequenceDrinking_options = ['Nunca bebeu', 'Diariamente', 'Semanalmente', 'Mensalmente', 'Esporadicamente']
-      @whatDrinked_options = ['Nunca bebeu', 'Destilados (cachaça, uísque)', 'Fermentados (cerveja, vinho)']
+      @whatDrinked_options = ['Nunca bebeu', 'Destilados', 'Fermentados']
       @totalExposition_options = ['Nenhuma', 'Diaria', 'Mais de 3 vezes por semana', 'Menos de três vezes por semana']
       @dayPeriod_options = ['Sem exposição', 'Até as 10:00h', '10:00h ~ 16:00h', 'Após 16:00h']
       @frequenceSmoking_options = ['Nunca fumou', 'Diariamente', 'Semanalmente', 'Mensalmente', 'Esporadicamente']

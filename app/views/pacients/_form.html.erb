@@ -74,9 +74,10 @@
         </div>
 
         <div class="field">
-          Fermentados (Vinho, Cerveja): <%= check_box_tag 'pacient[whatDrinked][]', 'Cerveja/Vinho', checked('Cerveja/Vinho'), id: 'fermentados' %>
-
-          Destilados (Cachaça, Whiski): <%= check_box_tag 'pacient[whatDrinked][]', 'Whiski/Cachaça', checked('Whiski/Cachaça'), id: 'destilados' %>
+          <%= label_tag 'drink_destilado', "Destilados (cachaça, whiski)"%>
+          <%= check_box_tag 'pacient[whatDrinked][]', 'Destilados', checked('Destilados'), id: 'drink_destilado'%>
+          <%= label_tag 'drink_fermentado', "Fermentados (cerveja, vinho)"%>
+          <%= check_box_tag 'pacient[whatDrinked][]', 'Fermentados', checked('Fermentados'), id: 'drink_fermentado'%>
         </div>
       </section>
       
