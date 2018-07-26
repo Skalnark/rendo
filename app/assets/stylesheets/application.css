@@ -151,6 +151,14 @@ a:visited {
     font-family: Georgia, "Times New Roman", Times, serif;
 }
 
+img{
+    display: block;
+    margin: 0 auto;
+    width: 25vw;
+    height: 25vw;
+    border-radius: 150px;
+}
+
 #already_drank,
 #already_smoked{
     display: none;

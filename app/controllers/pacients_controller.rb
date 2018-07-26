@@ -78,7 +78,7 @@ class PacientsController < ApplicationController
       params.require(:pacient).permit(:name, :sex, :birth, :occupation, :phone, :protesis, 
          :oralSex, :observation, :street, :number, :neighborhood, :city, :state, :totalExposition,
          :dayPeriod, :startedTabagism, :frequenceSmoking, :stopedSmoking, :whatSmoked, 
-         :startedDrinking, :frequenceDrinking, :stopedDrinking, :whatDrinked[], :whoHadCancer, :video)
+         :startedDrinking, :frequenceDrinking, :stopedDrinking, :whatDrinked, :whoHadCancer, :video)
     end
 
     def upload_video

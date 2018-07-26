@@ -5,8 +5,8 @@
 			drink = $('#pacient_frequenceDrinking option:selected').val();
 			if  drink is "Nunca bebeu"
 				$('#already_drank').fadeOut();
-				$('#pacient_startedDrinking').val('Nunca bebeu');
-				$('#pacient_stopedDrinking').val('Nunca bebeu');
+				$('#pacient_startedDrinking').val(0);
+				$('#pacient_stopedDrinking').val(0);
 			else
 				$('#already_drank').fadeIn();
 
@@ -15,7 +15,7 @@
 			smoke = $('#pacient_frequenceSmoking option:selected').val();
 			if  smoke is "Nunca fumou"
 				$('#already_smoked').fadeOut();
-				$('#pacient_startedTabagism').val('Nunca fumou');
-				$('#pacient_stopedSmoking').val('Nunca fumou');
+				$('#pacient_startedTabagism').val(0);
+				$('#pacient_stopedSmoking').val(0);
 			else
 				$('#already_smoked').fadeIn();
