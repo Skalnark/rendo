@@ -18,13 +18,14 @@ class PacientsController < ApplicationController
     @pacient = Pacient.new
     options
     @need_video = true
-    @checked = ""
+    @whatSmoked = " "
   end
 
   # GET /pacients/1/edit
   def edit
     options
     @need_video = false
+    @whatSmoked = " "
   end
 
   # POST /pacients
@@ -84,7 +85,7 @@ class PacientsController < ApplicationController
     def upload_video
       @need_video = true
     end
-
+    
     def options
       @sex_options = ['Masculino', 'Feminino', 'Outro']
       @state_options = ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO']

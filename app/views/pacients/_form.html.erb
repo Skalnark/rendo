@@ -74,10 +74,9 @@
         </div>
 
         <div class="field">
-          <%= label_tag 'drink_destilado', "Destilados (cachaça, whiski)"%>
-          <%= check_box_tag 'pacient[whatDrinked][]', 'Destilados', checked('Destilados'), id: 'drink_destilado'%>
-          <%= label_tag 'drink_fermentado', "Fermentados (cerveja, vinho)"%>
-          <%= check_box_tag 'pacient[whatDrinked][]', 'Fermentados', checked('Fermentados'), id: 'drink_fermentado'%>
+          <%= form.label "O que bebe/bebia?"%><br>
+          <%= form.check_box :whatDrinked, {}, concatenateDrinks("Destilados"), nil%> Destilados (Cachaça / Whiski)
+          <%= form.check_box :whatDrinked, {}, concatenateDrinks("Fermentados"), nil%> Fermentados (Cerveja / Vinho)
         </div>
       </section>
       
@@ -111,7 +110,12 @@
         </div>
 
         <div class="field">
-          O que fumava: <%= form.select :whatSmoked, @whatSmoked_options, :value => 'Nunca fumou' %>
+          O que fumava:<br>
+          <%= form.check_box :whatSmoked, {}, concatenateSmoke("Charuto"), nil%> Charuto
+          <%= form.check_box :whatSmoked, {}, concatenateSmoke("Cigarro"), nil%> Cigarro
+          <%= form.check_box :whatSmoked, {}, concatenateSmoke("Cachimbo"), nil%> Cachimbo
+          <%= form.check_box :whatSmoked, {}, concatenateSmoke("Palha"), nil%> Palha
+          <%= form.check_box :whatSmoked, {}, concatenateSmoke("Rolo"), nil%> Rolo
         </div>
       </section>
     </fieldset>
