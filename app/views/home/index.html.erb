@@ -1,12 +1,16 @@
+<div class="form-style-5">
 
-<div class="button-style">
-	<%= link_to 'Ver pacientes cadastrados', pacients_path%>
-	<%= link_to 'Cadastrar novo paciente', new_pacient_path%>
-</div>
+	<%= image_tag("/rede_escuraa.png", :alt => "ícone", :class => "black-image") %>
 
-<br>
-<br>
-<br>
-<div class="button-style">
-	<%= button_to 'Logout', destroy_interviewer_session_path, method: :delete %>
+	<div class="actions">
+		<%= link_to 'Ver pacientes cadastrados', pacients_path%>
+		<%= link_to 'Cadastrar novo paciente', new_pacient_path%>
+	</div>
+
+	<br>
+	<br>
+	<br>
+	<div class="actions">
+		<%= button_to 'Logout', destroy_interviewer_session_path, method: :delete %>
+	</div>
 </div>

@@ -69,7 +69,7 @@ body{
     height:35px;
 }
 .form-style-5 .number {
-    background: #1abc9c;
+    background: #226f77;
     color: #fff;
     height: 30px;
     width: 30px;
@@ -82,6 +82,29 @@ body{
     border-radius: 15px 15px 15px 0px;
 }
 
+/*Buttons stylesheets*/
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.actions{
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+}
+
+.button-style{
+    width: 22vw;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
 .form-style-5 input[type="submit"],
 .form-style-5 input[type="button"],
 .form-style-5 a,
@@ -91,15 +114,15 @@ body{
     cursor: pointer;
     position: left;
     display: inline-block;
-    padding: 18px 0px 18px 0px;
+    padding: 18px 0px;
     color: #FFF;
-    margin: auto;
-    background: #1abc9c;
+    margin: 0 auto;
+    background: #226f77;
     font-size: 18px;
     text-align: center;
     font-style: normal;
     width: 22vw;
-    border: 1px solid #16a085;
+    border: 1px solid #134c52;
     border-width: 1px 1px 3px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -111,8 +134,14 @@ body{
 .button-style a:hover,
 .button-style input[type="submit"]:hover
 {
-    background: #109177;
+    background: #5b949a;
 }
+
+/*Table stylesheets*/
+.form-style-5 table {
+    border-collapse: collapse;
+}
+
 .form-style-5 select, th, td{
     text-align: center;
     border: 1px solid grey;
@@ -130,32 +159,26 @@ body{
     margin-bottom: 30px;
 }
 
-.form-style-5 table {
-    border-collapse: collapse;
-}
-
-a:link {
-    text-decoration: none;
-}
-
-a:visited {
-    text-decoration: none;
-}
-
-.button-style{
-    width: 22vw;
-    margin: auto;
-    padding: 20px;
-    background: #f4f7f8;
-    border-radius: 8px;
-    font-family: Georgia, "Times New Roman", Times, serif;
-}
-
-img{
+/*Images stylesheets*/
+.white-image{
     display: block;
     margin: 0 auto;
     width: 25vw;
     height: 25vw;
+}
+
+.black-image{
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 260px;
+}
+
+.icon{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
 }
 
 #already_drank,

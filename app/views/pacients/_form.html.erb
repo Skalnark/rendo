@@ -11,6 +11,7 @@
     </div>
   <% end %>
   <form>
+    <%= image_tag("/rede_escuraa.png", :alt => "ícone", :class => "icon") %>
     <fieldset>
       <legend><span class="number">1</span> Informações sobre o paciente</legend>
       <div class="field">
@@ -75,8 +76,8 @@
 
         <div class="field">
           <%= form.label "O que bebe/bebia?"%><br>
-          <%= form.check_box :whatDrinked, {}, concatenateDrinks("Destilados"), nil%> Destilados (Cachaça / Whiski)
-          <%= form.check_box :whatDrinked, {}, concatenateDrinks("Fermentados"), nil%> Fermentados (Cerveja / Vinho)
+          <%= form.check_box :whatDrinked, {checked:false}, concatenateDrinks("Destilados"), nil%> Destilados (Cachaça / Whiski)
+          <%= form.check_box :whatDrinked, {checked:false}, concatenateDrinks("Fermentados"), nil%> Fermentados (Cerveja / Vinho)
         </div>
       </section>
       
@@ -111,11 +112,11 @@
 
         <div class="field">
           O que fumava:<br>
-          <%= form.check_box :whatSmoked, {}, concatenateSmoke("Charuto"), nil%> Charuto
-          <%= form.check_box :whatSmoked, {}, concatenateSmoke("Cigarro"), nil%> Cigarro
-          <%= form.check_box :whatSmoked, {}, concatenateSmoke("Cachimbo"), nil%> Cachimbo
-          <%= form.check_box :whatSmoked, {}, concatenateSmoke("Palha"), nil%> Palha
-          <%= form.check_box :whatSmoked, {}, concatenateSmoke("Rolo"), nil%> Rolo
+          <%= form.check_box :whatSmoked, {checked:false}, concatenateSmoke("Charuto"), nil%> Charuto
+          <%= form.check_box :whatSmoked, {checked:false}, concatenateSmoke("Cigarro"), nil%> Cigarro
+          <%= form.check_box :whatSmoked, {checked:false}, concatenateSmoke("Cachimbo"), nil%> Cachimbo
+          <%= form.check_box :whatSmoked, {checked:false}, concatenateSmoke("Palha"), nil%> Palha
+          <%= form.check_box :whatSmoked, {checked:false}, concatenateSmoke("Rolo"), nil%> Rolo
         </div>
       </section>
     </fieldset>
@@ -148,7 +149,7 @@
       </div>
     </fieldset>
 
-    <div class="button-style">
+    <div class="actions">
       <%= form.submit "Cadastrar paciente", data: { disable_with: 'Uploading'} %>
       <%= link_to "Voltar", pacients_path%>
     </div>

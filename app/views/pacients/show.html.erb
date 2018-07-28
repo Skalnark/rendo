@@ -1,4 +1,7 @@
 <div class="form-style-5">
+
+  <%= image_tag("/rede_escuraa.png", :alt => "ícone", :class => "icon") %>
+
   <p id="notice"><%= notice %></p>
 
   <p>
@@ -121,11 +124,11 @@
     <strong>Observação:</strong>
     <%= @pacient.observation %>
   </p>
-</div>
 
-<div class="button-style">
-  <%= link_to 'Cadastrar Paciente', new_pacient_path%>
-  <%= link_to 'Home', root_path%>
+  <div class="actions">
   <%= link_to 'Editar Paciente', edit_pacient_path(@pacient)%>
+  <%= link_to 'Cadastrar novo Paciente', new_pacient_path%>
   <%= link_to 'Voltar', pacients_path%>
+  <%= link_to 'Home', root_path%>
+  </div>
 </div>

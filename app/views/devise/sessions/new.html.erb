@@ -1,7 +1,6 @@
 <div class="form-style-5">
-
-  <%= image_tag("/Rede (Fundo Escuro).png", :alt => "rede") %>
-  <!--<%= image_tag("/Rede.png", :alt => "rede") %>-->
+  
+  <%= image_tag("/rede_cortada.png", :alt => "logo", :class => "white-image")%>
 
   <h2>Tela de Login</h2>
 
@@ -32,11 +31,7 @@
 
     <div class="actions">
       <%= f.submit "Fazer Login" %>
+      <%= render "devise/shared/links" %>
     </div>
   <% end %>
-  
-  <div class="actions">
-    <%= render "devise/shared/links" %>
-  </div>
-
 </div>

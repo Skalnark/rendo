@@ -1,4 +1,7 @@
 <div class="form-style-5">
+
+	 <%= image_tag("/rede_cortada.png", :alt => "logo", :class => "white-image") %>
+
 	<h2>Esqueceu a senha?</h2>
 
 	<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
@@ -13,10 +16,7 @@
 
 	  <div class="actions">
 	    <%= f.submit "Recuperar a senha" %>
+	    <%= render "devise/shared/links" %>
 	  </div>
 	<% end %>
-</div>
-
-<div class="button-style">
-  <%= render "devise/shared/links" %>
 </div>

@@ -1,4 +1,7 @@
 <div class="form-style-5">
+
+  <%= image_tag("/rede_escuraa.png", :alt => "ícone", :class => "icon") %>
+
   <p id="notice"><%= notice %></p>
   <legend>Pacientes</legend>
   <table>
@@ -67,9 +70,8 @@
       <% end %>
     </tbody>
   </table>
-</div>
 
-<div class="button-style">
+  <div class="actions">
   <%= link_to 'Cadastrar Paciente', new_pacient_path%>
   <%= link_to 'Home', root_path%>
 </div>
