@@ -116,6 +116,7 @@
           <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Charuto", nil%> Charuto
           <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Cigarro", nil%> Cigarro
           <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Cachimbo", nil%> Cachimbo
+          <br>
           <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Palha", nil%> Palha
           <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Rolo", nil%> Rolo
         </div>
@@ -125,7 +126,20 @@
     <fieldset>
       <legend><span class="number">6</span> Outros</legend>
       <div class="field">
-        Quem na família teve câncer de garganta ou boca: <%= form.select :whoHadCancer, @whoHadCancer_options %>
+        Quem na família teve câncer de garganta ou boca: <br>
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'didnt_had_cancer'}, "Ninguém", nil%> Ninguém
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'didnt_had_cancer'}, "Não sei", nil%> Não sei
+          <br>
+          <br>
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "O próprio paciente", nil%> O próprio paciente
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Avô/Avó", nil%> Avô/Avó
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Pai/Mãe", nil%> Pai/Mãe
+          <br>
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Tio/Tia", nil%> Tio/Tia
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Primo/Prima", nil%> Primo/Prima
+        </section>
+        <br>
+        <br>
       </div>
     
       <div class="field">

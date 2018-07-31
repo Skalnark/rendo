@@ -86,7 +86,7 @@ class PacientsController < ApplicationController
       params.require(:pacient).permit(:name, :sex, :birth, :occupation, :phone, :protesis, 
          :oralSex, :observation, :street, :number, :neighborhood, :city, :state, :totalExposition,
          :dayPeriod, :startedTabagism, :frequenceSmoking, :stopedSmoking, :startedDrinking, 
-         :frequenceDrinking, :stopedDrinking, :whoHadCancer, :video, whatSmoked:[], whatDrinked:[])
+         :frequenceDrinking, :stopedDrinking, :video, whoHadCancer:[], whatSmoked:[], whatDrinked:[])
     end
 
     def upload_video
@@ -100,7 +100,6 @@ class PacientsController < ApplicationController
       @totalExposition_options = ['Nenhuma', 'Diaria', 'Mais de 3 vezes por semana', 'Menos de três vezes por semana']
       @dayPeriod_options = ['Sem exposição', 'Até as 10:00h', '10:00h ~ 16:00h', 'Após 16:00h']
       @frequenceSmoking_options = ['Nunca fumou', 'Diariamente', 'Semanalmente', 'Mensalmente', 'Esporadicamente']
-      @whoHadCancer_options = ['Ninguém', 'Não sabe', 'O próprio paciente', 'Avô/Avó', 'Pai/Mãe', 'Tio/Tia', 'Primo, Prima']
       @oralSex_options = ['Sim', 'Não', 'Não respondeu']
     end
 end
