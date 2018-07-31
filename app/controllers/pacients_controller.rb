@@ -5,7 +5,13 @@ class PacientsController < ApplicationController
   # GET /pacients
   # GET /pacients.json
   def index
-    @pacients = Pacient.all
+    @pacients = []
+
+    Pacient.all.each do |p|
+      if p.interviewer_email == current_interviewer.email
+        @pacients << p
+      end
+    end
   end
 
   # GET /pacients/1
@@ -32,6 +38,7 @@ class PacientsController < ApplicationController
   # POST /pacients.json
   def create
     @pacient = Pacient.new(pacient_params)
+    @pacient.interviewer_email = current_interviewer.email
 
     respond_to do |format|
       if @pacient.save
@@ -89,7 +96,7 @@ class PacientsController < ApplicationController
     def options
       @sex_options = ['Masculino', 'Feminino', 'Outro']
       @state_options = ['AC', 'AL', 'AM', 'AP', 'BA', 'CE', 'DF', 'ES', 'GO', 'MA', 'MG', 'MS', 'MT', 'PA', 'PB', 'PE', 'PI', 'PR', 'RJ', 'RN', 'RO', 'RR', 'RS', 'SC', 'SE', 'SP', 'TO']
-      @frequenceDrinking_options = ['Nunca bebeu', 'Diariamente', 'Semanalmente', 'Mensalmente', 'Esporadicamente']s
+      @frequenceDrinking_options = ['Nunca bebeu', 'Diariamente', 'Semanalmente', 'Mensalmente', 'Esporadicamente']
       @totalExposition_options = ['Nenhuma', 'Diaria', 'Mais de 3 vezes por semana', 'Menos de três vezes por semana']
       @dayPeriod_options = ['Sem exposição', 'Até as 10:00h', '10:00h ~ 16:00h', 'Após 16:00h']
       @frequenceSmoking_options = ['Nunca fumou', 'Diariamente', 'Semanalmente', 'Mensalmente', 'Esporadicamente']

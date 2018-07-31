@@ -1,6 +1,7 @@
 class CreatePacients < ActiveRecord::Migration[5.2]
   def change
     create_table :pacients do |t|
+      t.string :interviewer_email
       t.string :name
       t.string :sex
       t.date :birth

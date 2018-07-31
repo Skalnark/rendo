@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2018_07_17_001328) do
   end
 
   create_table "pacients", force: :cascade do |t|
+    t.string "interviewer_email"
     t.string "name"
     t.string "sex"
     t.date "birth"
