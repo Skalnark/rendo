@@ -7,28 +7,34 @@
   <table>
     <thead>
       <tr>
+        <th>Responsável pelo cadastro/atualização</th>
         <th>Nome</th>
         <th>Sexo</th>
         <th>Nascimento</th>
         <th>Ocupação</th>
         <th>Telefone</th>
-        <th>Rua</th>
-        <th>Bairro</th>
-        <th>Cidade</th>
+        
         <th>Estado</th>
-        <th>Exp. solar</th>
-        <th>Horário</th>
-        <th>Tabagismo</th>
-        <th>Freq. tabagismo</th>
-        <th>Parou o de fumar</th>
-        <th>O que fumava</th>
-        <th>Começou a beber</th>
-        <th>Frequência</th>
+        <th>Cidade</th>  
+        <th>Rua</th>
+        <th>Bairro</th>   
+        
+        <th>Alcoolismo</th>
+        <th>Frequência alcoolismo</th>
         <th>Parou de beber</th>
-        <th>Bebidas</th>
-        <th>Câncer</th>
-        <th>Protese</th>
-        <th>Sexo Oral desprotegido</th>
+        <th>Tipo de bebida</th>
+        
+        <th>Exposição solar</th>
+        <th>Horário</th>
+        
+        <th>Tabagismo</th>
+        <th>Frequência que fuma</th>
+        <th>Parou de fumar</th>
+        <th>Tipo de fumo</th>
+        
+        <th>Ocorrência de câncer na família</th>
+        <th>Prótese</th>
+        <th>Sexo oral desprotegido</th>
         <th>Observação</th>
         <th>Vídeo</th>
         <th colspan="2"></th>
@@ -38,25 +44,31 @@
     <tbody>
       <% @pacients.each do |pacient| %>
         <tr>
+          <td><%= pacient.interviewer_email%></td>
           <td><%= pacient.name %></td>
           <td><%= pacient.sex %></td>
           <td><%= pacient.birth %></td>
           <td><%= pacient.occupation %></td>
           <td><%= pacient.phone %></td>
-          <td><%= pacient.street %></td>
-          <td><%= pacient.neighborhood %></td>
-          <td><%= pacient.city %></td>
+          
           <td><%= pacient.state %></td>
-          <td><%= pacient.totalExposition %></td>
-          <td><%= pacient.dayPeriod %></td>
-          <td><%= pacient.startedTabagism %></td>
-          <td><%= pacient.frequenceSmoking %></td>
-          <td><%= pacient.stopedSmoking %></td>
-          <td><%= pacient.whatSmoked %></td>
+          <td><%= pacient.city %></td>     
+          <td><%= pacient.street %></td>
+          <td><%= pacient.neighborhood %></td>     
+          
           <td><%= pacient.startedDrinking %></td>
           <td><%= pacient.frequenceDrinking %></td>
           <td><%= pacient.stopedDrinking %></td>
           <td><%= pacient.whatDrinked %></td>
+          
+          <td><%= pacient.totalExposition %></td>
+          <td><%= pacient.dayPeriod %></td>
+          
+          <td><%= pacient.startedTabagism %></td>
+          <td><%= pacient.frequenceSmoking %></td>
+          <td><%= pacient.stopedSmoking %></td>
+          <td><%= pacient.whatSmoked %></td>
+
           <td><%= pacient.whoHadCancer %></td>
           <td><%= pacient.protesis %></td>
           <td><%= pacient.oralSex %></td>

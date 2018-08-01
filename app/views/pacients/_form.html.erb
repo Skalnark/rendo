@@ -31,12 +31,21 @@
       </div>
 
       <div class="field">
-        Telefone: <%= form.text_field(:phone, placeholder: '00-90000-0000')%>
+        Telefone: <%= form.text_field :phone %>
       </div>
     </fieldset>
 
     <fieldset>
       <legend><span class="number">2</span> Endereço</legend>
+      
+      <div class="field">
+        Estado: <%= form.select(:state, @state_options) %>
+      </div>
+
+      <div class="field">
+        Cidade: <%= form.text_field :city %>
+      </div>
+      
       <div class="field">
         Rua: <%= form.text_field :street %>
       </div>
@@ -49,33 +58,26 @@
         Bairro: <%= form.text_field :neighborhood %>
       </div>
 
-      <div class="field">
-        Estado: <%= form.select(:state, @state_options) %>
-      </div>
-
-      <div class="field">
-        Cidade: <%= form.text_field :city %>
-      </div>
     </fieldset>
 
     <fieldset>
       <legend><span class="number">3</span> Alcoolismo</legend>
 
       <div class="field">
-        Frequência com que bebe: <%= form.select :frequenceDrinking, @frequenceDrinking_options, :value => 'Nunca bebeu' %>
+        Frequência que bebe/bebia: <%= form.select :frequenceDrinking, @frequenceDrinking_options, :value => 'Nunca bebeu' %>
       </div>
 
       <section id="already_drank">
         <div class="field">
-          Quando começou a beber (anos): <%= form.number_field :startedDrinking, :value => 0, :min => 0 %>
+          Com quantos anos começou a beber: <%= form.number_field :startedDrinking, :value => 0, :min => 0 %>
         </div>
 
         <div class="field">
-          Quando parou de beber (anos): <%= form.number_field :stopedDrinking, :value => 0, :min => 0 %>
+          Com quantos anos parou de beber: <%= form.number_field :stopedDrinking, :value => 0, :min => 0 %>
         </div>
 
         <div class="field">
-          <%= form.label "O que bebe/bebia?"%>
+          <%= form.label "O que bebe/bebia"%>
           <%= form.check_box :whatDrinked, {checked:false, class:'drinks', multiple:true}, "Destilados", nil%> Destilados (Cachaça / Whiski)
           <%= form.check_box :whatDrinked, {checked:false, class:'drinks', multiple:true}, "Fermentados", nil%> Fermentados (Cerveja / Vinho)
         </div>
@@ -99,7 +101,7 @@
       <legend><span class="number">5</span> Tabagismo</legend>
 
       <div class="field">
-        Frequência com que fuma: <%= form.select :frequenceSmoking, @frequenceSmoking_options, :value => 'Nunca fumou' %>
+        Frequência que fuma: <%= form.select :frequenceSmoking, @frequenceSmoking_options, :value => 'Nunca fumou' %>
       </div>
 
       <section id="already_smoked">
@@ -108,17 +110,16 @@
         </div>
 
         <div class="field">
-          Com quantos anos parou de fumar (0 = nunca fumou): <%= form.number_field :stopedSmoking, :value => 0, :min => 0%>
+          Com quantos anos parou de fumar: <%= form.number_field :stopedSmoking, :value => 0, :min => 0%>
         </div>
 
         <div class="field">
-          O que fumava:<br>
-          <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Charuto", nil%> Charuto
-          <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Cigarro", nil%> Cigarro
-          <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Cachimbo", nil%> Cachimbo
-          <br>
-          <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Palha", nil%> Palha
-          <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Rolo", nil%> Rolo
+          O que fuma/fumava:<br>
+          <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Charuto", nil%> Charuto <br>
+          <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Cigarro", nil%> Cigarro <br>
+          <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Cachimbo", nil%> Cachimbo <br>
+          <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Palha", nil%> Palha <br>
+          <%= form.check_box :whatSmoked, {checked:false, class: 'fumes', multiple:true}, "Rolo", nil%> Rolo <br>
         </div>
       </section>
     </fieldset>
@@ -126,19 +127,15 @@
     <fieldset>
       <legend><span class="number">6</span> Outros</legend>
       <div class="field">
-        Quem na família teve câncer de garganta ou boca: <br>
-          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'didnt_had_cancer'}, "Ninguém", nil%> Ninguém
-          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'didnt_had_cancer'}, "Não sei", nil%> Não sei
-          <br>
-          <br>
-          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "O próprio paciente", nil%> O próprio paciente
-          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Avô/Avó", nil%> Avô/Avó
-          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Pai/Mãe", nil%> Pai/Mãe
-          <br>
-          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Tio/Tia", nil%> Tio/Tia
-          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Primo/Prima", nil%> Primo/Prima
+        Membros das família que apresentaram câncer de garganta ou de boca: <br>
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'didnt_had_cancer'}, "Ninguém", nil%> Ninguém <br>
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'didnt_had_cancer'}, "Não sei", nil%> Não sabe<br>
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "O próprio paciente", nil%> O próprio paciente<br>
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Avô/Avó", nil%> Avô/Avó<br>
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Pai/Mãe", nil%> Pai/Mãe<br>
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Tio/Tia", nil%> Tio/Tia<br>
+          <%= form.check_box :whoHadCancer, {checked:false, multiple:true, class: 'had_cancer'}, "Primo/Prima", nil%> Primo/Prima<br>
         </section>
-        <br>
         <br>
       </div>
     

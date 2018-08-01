@@ -3,131 +3,144 @@
   <%= image_tag("/rede_escuraa.png", :alt => "ícone", :class => "icon") %>
 
   <p id="notice"><%= notice %></p>
+  
+  <section id="pacient_info">
+    <p>
+      <strong>Responsável pelo cadastro/atualização: </strong>
+      <%= @pacient.interviewer_email%>
+    </p>
+    <p>
+      <strong>Nome:</strong>
+      <%= @pacient.name %>
+    </p>
+  
+    <p>
+      <strong>Sexo:</strong>
+      <%= @pacient.sex %>
+    </p>
+  
+    <p>
+      <strong>Data de Nascimento:</strong>
+      <%= @pacient.birth %>
+    </p>
+  
+    <p>
+      <strong>Ocupação:</strong>
+      <%= @pacient.occupation %>
+    </p>
+  
+    <p>
+      <strong>Telefone:</strong>
+      <%= @pacient.phone %>
+    </p>
+    
+    <p>
+      <strong>Estado:</strong>
+      <%= @pacient.state %>
+    </p>
+    
+    <p>
+      <strong>Cidade:</strong>
+      <%= @pacient.city %>
+    </p>
 
-  <p>
-    <strong>Nome:</strong>
-    <%= @pacient.name %>
-  </p>
+    <p>
+      <strong>Rua:</strong>
+      <%= @pacient.street %>
+    </p>
+  
+    <p>
+      <strong>Número:</strong>
+      <%= @pacient.number %>
+    </p>
+  
+    <p>
+      <strong>Bairro:</strong>
+      <%= @pacient.neighborhood %>
+    </p>
+  
+  </section>
+  
+  <section id="alcoholism">
+    <p>
+      <strong>Com quantos anos começou a beber:</strong>
+      <%= @pacient.startedDrinking %>
+    </p>
+  
+    <p>
+      <strong>Frequência que bebe/bebia:</strong>
+      <%= @pacient.frequenceDrinking %>
+    </p>
+  
+    <p>
+      <strong>Com quantos anos parou de beber:</strong>
+      <%= @pacient.stopedDrinking %>
+    </p>
+  
+    <p>
+      <strong>O que bebe/bebia:</strong>
+      <%= @pacient.whatDrinked %>
+    </p>
+  </section>
 
-  <p>
-    <strong>Sexo:</strong>
-    <%= @pacient.sex %>
-  </p>
+  <section id="solar_expo">
+    <p>
+      <strong>Exposição solar sofrida:</strong>
+      <%= @pacient.totalExposition %>
+    </p>
+  
+    <p>
+      <strong>Horário de exposição:</strong>
+      <%= @pacient.dayPeriod %>
+    </p>
+  </section>
 
-  <p>
-    <strong>Data de Nascimento:</strong>
-    <%= @pacient.birth %>
-  </p>
-
-  <p>
-    <strong>Ocupação:</strong>
-    <%= @pacient.occupation %>
-  </p>
-
-  <p>
-    <strong>Telefone:</strong>
-    <%= @pacient.phone %>
-  </p>
-
-  <p>
-    <strong>Rua:</strong>
-    <%= @pacient.street %>
-  </p>
-
-  <p>
-    <strong>Número:</strong>
-    <%= @pacient.number %>
-  </p>
-
-  <p>
-    <strong>Bairro:</strong>
-    <%= @pacient.neighborhood %>
-  </p>
-
-  <p>
-    <strong>Cidade:</strong>
-    <%= @pacient.city %>
-  </p>
-
-  <p>
-    <strong>Estado:</strong>
-    <%= @pacient.state %>
-  </p>
-
-  <p>
-    <strong>Exposição solar sofrida:</strong>
-    <%= @pacient.totalExposition %>
-  </p>
-
-  <p>
-    <strong>Horário de exposição:</strong>
-    <%= @pacient.dayPeriod %>
-  </p>
-
-  <p>
-    <strong>Quando começou a fumar:</strong>
-    <%= @pacient.startedTabagism %>
-  </p>
-
-  <p>
-    <strong>Frequência com que fuma:</strong>
-    <%= @pacient.frequenceSmoking %>
-  </p>
-
-  <p>
-    <strong>Quando Parou de Fumar:</strong>
-    <%= @pacient.stopedSmoking %>
-  </p>
-
-  <p>
-    <strong>O que fumava:</strong>
-    <%= @pacient.whatSmoked %>
-  </p>
-
-  <p>
-    <strong>Quando começou a beber:</strong>
-    <%= @pacient.startedDrinking %>
-  </p>
-
-  <p>
-    <strong>Frequência com que bebe:</strong>
-    <%= @pacient.frequenceDrinking %>
-  </p>
-
-  <p>
-    <strong>Quando Parou de beber:</strong>
-    <%= @pacient.stopedDrinking %>
-  </p>
-
-  <p>
-    <strong>O que bebia:</strong>
-    <%= @pacient.whatDrinked %>
-  </p>
-
-  <p>
-    <strong>Quem na família teve câncer de garganta ou boca:</strong>
-    <%= @pacient.whoHadCancer %>
-  </p>
-
-  <p>
-    <strong>Possui prótese:</strong>
-    <%= @pacient.protesis %>
-  </p>
-
-  <p>
-    <strong>Realizou sexo oral desprotegido:</strong>
-    <%= @pacient.oralSex %>
-  </p>
-
-
-  <p>
-    <strong>Observação:</strong>
-    <%= @pacient.observation %>
-  </p>
+  <section id="tabagism">
+    <p>
+      <strong>Com quantos anos começou a fumar:</strong>
+      <%= @pacient.startedTabagism %>
+    </p>
+  
+    <p>
+      <strong>Frequência que fuma/fumava:</strong>
+      <%= @pacient.frequenceSmoking %>
+    </p>
+  
+    <p>
+      <strong>Com quantos anos parou de fumar:</strong>
+      <%= @pacient.stopedSmoking %>
+    </p>
+  
+    <p>
+      <strong>O que fuma/fumava:</strong>
+      <%= @pacient.whatSmoked %>
+    </p>
+  </section>
+  
+  <section id="other_info">
+    <p>
+      <strong>Membros das família que apresentaram câncer de garganta ou de boca:</strong>
+      <%= @pacient.whoHadCancer %>
+    </p>
+  
+    <p>
+      <strong>Prótese:</strong>
+      <%= @pacient.protesis %>
+    </p>
+  
+    <p>
+      <strong>Sexo oral desprotegido:</strong>
+      <%= @pacient.oralSex %>
+    </p>
+    <p>
+      <strong>Observação:</strong>
+      <%= @pacient.observation %>
+    </p>
+  </section>
 
   <div class="actions">
   <%= link_to 'Editar Paciente', edit_pacient_path(@pacient)%>
-  <%= link_to 'Cadastrar novo Paciente', new_pacient_path%>
+  <%= link_to 'Cadastrar Paciente', new_pacient_path%>
   <%= link_to 'Voltar', pacients_path%>
   <%= link_to 'Home', root_path%>
   </div>
