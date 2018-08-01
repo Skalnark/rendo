@@ -6,7 +6,7 @@ class CreatePacients < ActiveRecord::Migration[5.2]
       t.string :sex
       t.date :birth
       t.string :occupation
-      t.integer :phone
+      t.string :phone
       t.string :protesis
       t.string :oralSex
       t.text :observation
