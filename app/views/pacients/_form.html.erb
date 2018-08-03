@@ -153,11 +153,46 @@
 
       <div class="field">
         Enviar o vídeo:
-          <%if(@need_video)%>
-            <%= form.file_field :video, required: true%>
-          <%else%>
-            <%= form.file_field :video%>
-          <%end%>
+        <%if(@need_video)%>
+          <%= form.file_field :video, required: true%>
+        <%else%>
+          <%= form.file_field :video%>
+        <%end%>
+        <br>
+        
+        <p>
+          <b>*Obs.:</b> O vídeo deverá ser feito preferencialmente sob luz natural, celular na posiçao horizontal, de 15 à 20 cm de distância sem zoom e deve seguir o seguinte roteiro de filmagem:
+        </p>
+        <p>
+          <b>1)</b> Labios;
+        </p>
+        <p>
+          <b>2)</b> Mucosa labial superior e inferior;
+        </p>
+        <p>
+          <b>3)</b> Mucosa jugal direita;
+        </p>
+        <p>
+          <b>4)</b> Mucosa jugal esquerda
+        </p>
+        <p>
+          <b>5)</b> Palato duro e mole;
+        </p>
+        <p>
+          <b>6)</b> Gengiva e dentes;
+        </p>
+        <p>
+          <b>7)</b> Língua (dorso);
+        </p>
+        <p>
+          <b>8)</b> Língua (laterais);
+        </p>
+        <p>
+          <b>9)</b> Assoalho;
+        </p>
+        <p>
+          Filmar cada campo por pelo menos 3 segundos. (Contar 1001, 1002 e 1003). Solicite para o paciente afastar sua própria mucosa realizando treinamento prévio. O tamanho máximo do arquivo deve ser de até <b>100MB</b>.
+        </p>
       </div>
     </fieldset>
 

@@ -38,7 +38,7 @@ body{
     margin: 0;
     outline: 0;
     padding: 7px;
-    width: 80vw;
+    width: 30vw;
     box-sizing: border-box; 
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box; 
@@ -179,9 +179,9 @@ a:visited {
 }
 
 .icon{
-    width: 50px;
-    height: 50px;
-    border-radius: 25px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
 }
 
 #already_drank,
